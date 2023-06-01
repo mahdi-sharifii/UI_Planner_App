@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BottomNavBar extends StatefulWidget {
+class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
     super.key,
     required this.backgrandColor,
@@ -20,46 +20,25 @@ class BottomNavBar extends StatefulWidget {
   final int selectedIndex;
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
-
-class _BottomNavBarState extends State<BottomNavBar> {
-  bool isLod = false;
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(milliseconds: 70), () {
-      setState(() {
-        isLod = true;
-      });
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      height: isLod ? 73 : null,
-      duration: const Duration(milliseconds: 200),
+    return Container(
+      height: 73,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(50),
-        color: isLod ? widget.backgrandColor : Colors.white12,
-      ),
+          borderRadius: BorderRadius.circular(50), color: backgrandColor),
       margin: const EdgeInsets.only(left: 20, right: 20, bottom: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: List<Widget>.generate(
-          widget.icons.length,
+          icons.length,
           (index) {
             return IconButton(
-                isSelected: widget.selectedIndex == index,
+                isSelected: selectedIndex == index,
                 autofocus: true,
-                color: widget.selectedIndex == index
-                    ? widget.activeColor
-                    : widget.unActiveColor,
-                icon: Icon(widget.icons[index]),
+                color: selectedIndex == index ? activeColor : unActiveColor,
+                icon: Icon(icons[index]),
                 onPressed: () {
-                  if (widget.onTap != null) {
-                    widget.onTap!(index);
+                  if (onTap != null) {
+                    onTap!(index);
                   }
                 });
           },

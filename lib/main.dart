@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:planner_app/pages/home/home.dart';
+import 'package:planner_app/providers/bottom_nav_provider.dart';
+import 'package:planner_app/providers/progress_list_provider.dart';
 import 'package:planner_app/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +27,15 @@ class MyApp extends StatelessWidget {
       title: "planner",
       debugShowCheckedModeBanner: false,
       theme: MyTheme.theme,
-      home: const HomePage(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<BottomNavProvider>(
+              create: (_) => BottomNavProvider()),
+          ChangeNotifierProvider<ProgressProvider>(
+              create: (_) => ProgressProvider()),
+        ],
+        child: const HomePage(),
+      ),
     );
   }
 }
