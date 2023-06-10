@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planner_app/pages/home/veribles.dart';
+import 'package:planner_app/pages/home/variables.dart';
 
 class MyDialog extends StatelessWidget {
   const MyDialog({
@@ -63,7 +63,7 @@ class MyDialog extends StatelessWidget {
             Text(
               "coffee machine can make a cappuccino especially for you in 5 minutes. Do you want some coffee?",
               textAlign: TextAlign.center,
-              style: Veribles.alertDescription,
+              style: Variables.alertDescription,
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planner_app/pages/home/veribles.dart';
+import 'package:planner_app/pages/home/variables.dart';
 
 class Profiles extends StatelessWidget {
   const Profiles({super.key, required this.item, required this.index});
@@ -61,16 +61,17 @@ class Profiles extends StatelessWidget {
                     height: 18,
                     decoration: BoxDecoration(
                       color: index.isEven
-                          ? Veribles.myTextStyleTitle[0].color!.withOpacity(0.5)
-                          : Veribles.myTextStyleTitle[1].color!
+                          ? Variables.myTextStyleTitle[0].color!
+                              .withOpacity(0.5)
+                          : Variables.myTextStyleTitle[1].color!
                               .withOpacity(0.5),
                       shape: BoxShape.circle,
                     ),
                     child: Text(
                       "${item.length - 3}",
                       style: index.isEven
-                          ? Veribles.myTextStyleDis[0]
-                          : Veribles.myTextStyleDis[1],
+                          ? Variables.myTextStyleDis[0]
+                          : Variables.myTextStyleDis[1],
                     ))
               ],
             ),
