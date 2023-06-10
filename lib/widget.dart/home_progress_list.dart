@@ -3,7 +3,7 @@ import 'package:planner_app/providers/progress_list_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:planner_app/models/progress.dart';
-import 'package:planner_app/pages/home/veribles.dart';
+import 'package:planner_app/pages/home/variables.dart';
 
 class ProgressList extends StatelessWidget {
   const ProgressList({super.key, required this.listProgress});
@@ -72,8 +72,8 @@ class ProgressList extends StatelessWidget {
                           Text(
                             indexProgress.progressIndicator,
                             style: provider.selectedIndex == index
-                                ? Veribles.titleProgressA
-                                : Veribles.titleProgressU,
+                                ? Variables.titleProgressA
+                                : Variables.titleProgressU,
                           )
                         ],
                       ),
@@ -82,16 +82,16 @@ class ProgressList extends StatelessWidget {
                         child: Text(indexProgress.title,
                             maxLines: 2,
                             style: provider.selectedIndex == index
-                                ? Veribles.titleProgressA
-                                : Veribles.titleProgressU),
+                                ? Variables.titleProgressA
+                                : Variables.titleProgressU),
                       ),
                       SizedBox(
                         width: size.width * 0.21,
                         child: Text(
                           indexProgress.description,
                           style: provider.selectedIndex == index
-                              ? Veribles.bodyProgressA
-                              : Veribles.bodyProgressU,
+                              ? Variables.bodyProgressA
+                              : Variables.bodyProgressU,
                           maxLines: 2,
                         ),
                       )

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Veribles {
+class Variables {
   // Active
   static final TextStyle titleProgressU = GoogleFonts.varelaRound(
     color: const Color.fromARGB(250, 112, 70, 0),

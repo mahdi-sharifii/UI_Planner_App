@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                 Icons.chat_outlined,
                 Icons.settings
               ],
-              backgrandColor: themeData.primaryColor,
+              backgroundColor: themeData.primaryColor,
               activeColor: Colors.white,
               selectedIndex: provider.activeIndexProgress,
               unActiveColor: Colors.white38,

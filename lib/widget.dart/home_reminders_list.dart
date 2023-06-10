@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:planner_app/models/reminders.dart';
 import 'package:planner_app/widget.dart/home_profiles.dart';
-import 'package:planner_app/pages/home/veribles.dart';
+import 'package:planner_app/pages/home/variables.dart';
 
 class RemindersList extends StatelessWidget {
   const RemindersList({
@@ -30,14 +30,14 @@ class RemindersList extends StatelessWidget {
             children: [
               Text(
                 indexReminders.written,
-                style: Veribles.myTextStyleDis[1],
+                style: Variables.myTextStyleDis[1],
               ),
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: index.isEven
-                        ? Veribles.myColors[0]
-                        : Veribles.myColors[1]),
+                        ? Variables.myColors[0]
+                        : Variables.myColors[1]),
                 margin: const EdgeInsets.all(10),
                 height: size.height * 0.15,
                 width: size.width * 0.69,
@@ -47,14 +47,14 @@ class RemindersList extends StatelessWidget {
                       title: Text(
                         indexReminders.title,
                         style: index.isEven
-                            ? Veribles.myTextStyleTitle[0]
-                            : Veribles.myTextStyleTitle[1],
+                            ? Variables.myTextStyleTitle[0]
+                            : Variables.myTextStyleTitle[1],
                       ),
                       subtitle: Text(
                         indexReminders.description,
                         style: index.isEven
-                            ? Veribles.myTextStyleDis[0]
-                            : Veribles.myTextStyleDis[1],
+                            ? Variables.myTextStyleDis[0]
+                            : Variables.myTextStyleDis[1],
                       ),
                     ),
                     Row(
@@ -69,8 +69,8 @@ class RemindersList extends StatelessWidget {
                             child: Text(
                               indexReminders.period,
                               style: index.isEven
-                                  ? Veribles.myTextStyleDis[0]
-                                  : Veribles.myTextStyleDis[1],
+                                  ? Variables.myTextStyleDis[0]
+                                  : Variables.myTextStyleDis[1],
                             ),
                           )
                         ])
